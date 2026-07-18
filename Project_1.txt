@@ -1,0 +1,13 @@
+In Task 1 we get to learn and use the basics of Linux commands in order to do future tasks.
+
+1) mkdir -p /app/logs  ~ This creates a folder to store logs.
+
+2) touch /app/config.conf  ~ This creates config.conf
+
+3) echo "Started" > /app/logs/server.log ~ By doing this we inject the logs content into the logs file.
+
+4) pwd & ls -R /app   ~ this shows the current path location and shows the content of /app
+
+5) mv /app/logs/server.log /app/logs/server.bak  ~ This creates a backup by copying the original file into the new location.
+
+6) ls -l /app/config.conf   ~ By this we can audit the filesystem.
