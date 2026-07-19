@@ -1,0 +1,28 @@
+name: Build and Run Docker Container
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  docker-build-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build Docker Image
+        run: docker build -t my-app:v1 .
+
+      - name: Run Docker Container
+        run: docker run -d -p 8080:80 my-app:v1
+
+      - name: Check Container Status
+        run: |
+          docker ps
+          sleep 3
+          docker logs my-running-app
