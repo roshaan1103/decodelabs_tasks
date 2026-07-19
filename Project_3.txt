@@ -1,0 +1,2 @@
+In this task we have to create a CI/CD pipeline.
+I will be creating a workflow for this which will be accessable in GitHub Actions.
